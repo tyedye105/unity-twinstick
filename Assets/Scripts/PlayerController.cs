@@ -61,11 +61,18 @@ public class PlayerController : MonoBehaviour {
 				if(playerDirection.sqrMagnitude > 0.0f)
 					{
 						transform.rotation = Quaternion.LookRotation(playerDirection, Vector3.up);
-						Debug.DrawLine(playerDirection, Vector3.up, Color.red);
-						Debug.Log(Input.GetAxisRaw("RHorizontal"));
-						Debug.Log(Input.GetAxisRaw("RVertical"));
 					}
 		}
+		if(Input.GetAxisRaw("PrimaryShot")< 0.0f)
+		{
+		theGun.isFiring = true;
+		} 
+		if(Input.GetAxisRaw("PrimaryShot") > -1f)
+		{
+		theGun.isFiring = false;
+
+		}
+
 	}
 
 	void FixedUpdate () {

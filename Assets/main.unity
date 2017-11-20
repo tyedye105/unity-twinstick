@@ -618,3 +618,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   theGun: {fileID: 1443164555}
+  useController: 1
